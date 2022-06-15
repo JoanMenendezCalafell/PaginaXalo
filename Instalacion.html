@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <!--<img src="logo.png" alt="">-->
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Web XALO</span>
+                    <span class="profession">Proyecto XALO</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+            
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                          <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text"> Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="Grupo 1.html">
+                            <i class='bx bx-group icon'></i>
+                            <span class="text nav-text"> Grupo</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-link">
+                        <a href="Presupuesto.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Presupuesto</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Diario.html">
+                            <i class='bx bxs-book-content icon' ></i>
+                            <span class="text nav-text">Diario</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-link">
+                        <a href="https://www.paypal.com/paypalme/echengzhilim">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Donar para ONG </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="https://www.google.es/">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+            
+                
+            </div>
+        </div>
+
+
+    </nav>
+
+    <section class="home">
+        <div class="text" style="font-size: 25px;">
+            <h1>Instalación </h1>
+            <h4>Desde esta página podrás acudir a las distintas instalaciones que hemos realizado</h4>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <br>
+           <div style="display: flex;">
+            <div class="zoom">
+                <a href="Instalacion1.html"><img  class="flexing" src="./Imagenes/Imagenes Varias/IMG20220328154859(1).jpg " alt=""></a>
+               <h4>Instalación de canaletas</h4>
+            </div>
+                <div class="zoom">
+                    <a href="Instalación2.html"><img  class="flexing" src="./Imagenes/Imagenes Varias/roseta montada.jpg " alt=""></a>
+                   <h4>Instalación de rosetas y conectores hembra RJ45</h4>
+                </div>
+                <div class="zoom">
+                    <a href="Instalacion3.html"><img  class="flexing" src="./Imagenes/Imagenes Varias/canaleeta.jpg" alt=""></a>
+                   <h4>Instalación completa de clabes y roseta</h4>
+                </div>
+           </div>
+           <div style="display: flex; margin-top: 3%;">
+               <div class="zoom">
+                <a href="Instalación4.html"><img  class="flexing" src="./imaagenes/switch.jpg" alt=""></a>
+                   <h4>Conexiones y configuración del switch</h4>
+                </div>
+                <div class="zoom">
+                    <a href="Instalación5.html"><img  class="flexing" src="./imaagenes/ap.jpg" alt=""></a>
+                   <h4>Conexiones y configuración del AP</h4>
+                </div>
+                <div class="zoom">
+                    <a href="Instalación6.html"><img  class="flexing" src="./imaagenes/router.jpg" alt=""></a>
+                   <h4>Conexiones y configuración del router</h4>
+                </div>
+           </div>
+            <div class="zoom">
+                <a href="Instalación7.html"><img style="width: 20% ; height: 20%;" class="flexing" src="./imaagenes/impresora.jpg" alt=""></a>
+           <h4>Conexiones y configuración de la impresora</h4>
+        </div>
+           
+           <div style="margin-top: 25%;">
+               <h6>Y si lo deseas, siempre puedes donar a nuestro paypal</h6>
+              <a href="https://www.paypal.com/paypalme/echengzhilim"> <img class="imagenpequena" src="./Imagenes/Imagenes Varias/paypal.png" alt=""></a>
+           </div>
+        </div>
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+</body>
+</html>

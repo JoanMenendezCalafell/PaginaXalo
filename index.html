@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <!--<img src="logo.png" alt="">-->
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Web XALO</span>
+                    <span class="profession">Proyecto XALO</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+            
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="Grupo 1.html">
+                            <i class='bx bx-group icon'></i>
+                            <span class="text nav-text"> Grupo</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Instalacion.html">
+                            <i class='bx bx-wrench icon'></i>
+                            <span class="text nav-text">Instalacion</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Presupuesto.html">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Presupuesto</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="Diario.html">
+                            <i class='bx bxs-book-content icon' ></i>
+                            <span class="text nav-text">Diario</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-link">
+                        <a href="https://www.paypal.com/paypalme/echengzhilim">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Donar para ONG </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="https://www.google.es/">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+            
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text" style="font-size: 25px;">
+            <h1>¡Bienvenido a nuestra página! </h1>
+            <h4>Bienvenido a la página web del grupo 6, en la que documentamos todos los avances realizados en la creación de una red local en clase!</h4>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3>En nuestra página web, podrás encontrar...</h3>
+            <br>
+           <div style="display: flex;">
+                <div>
+                    <img  class="flexing" src="./Imagenes/Imagenes Varias/Trabajo en equipo.jpeg" alt="">
+                   <h4>El equipo que ha hecho esto posible</h4>
+                </div>
+                <div>
+                    <img  class="flexing" src="./Imagenes/Imagenes Varias/diario.png " alt="">
+                   <h4>El diario del avance del proyecto</h4>
+                </div>
+                <div>
+                    <img  class="flexing" src="./Imagenes/Imagenes Varias/presupuesto.jpg" alt="">
+                   <h4>El presupuesto que el equipo ha tenido</h4>
+                </div>
+           </div>
+           <div style="display: flex; margin-top: 3%;">
+               <div>
+                    <img  class="flexing" src="./Imagenes/Imagenes Varias/Plandetrabajo.jpg" alt="">
+                   <h4>Los distintos dispositivos usados en la instalación</h4>
+                </div>
+                <div>
+                    <img  class="flexing" src="./Imagenes/Imagenes Varias/Trabajo en equipo.jpeg" alt="">
+                   <h4>Las preguntas que se han respondido en el proyecto</h4>
+                </div>
+                <div>
+                    <img  class="flexing" src="./Imagenes/Imagenes Varias/conclusiones.jpg" alt="">
+                   <h4>Las conclusiones que el equipo ha sacado</h4>
+                </div>
+           </div>
+           <div style="margin-top: 25%;">
+               <h6>Y si lo deseas, siempre puedes donar a nuestro paypal</h6>
+              <a href="https://www.paypal.com/paypalme/echengzhilim"> <img class="imagenpequena" src="./Imagenes/Imagenes Varias/paypal.png" alt=""></a>
+           </div>
+        </div>
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+</body>
+</html>
